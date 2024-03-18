@@ -8,14 +8,16 @@
     <meta name="description" content="Pagina para calcular propinas" />
     <title>Cuentax | Hazlo tu mismo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="tip.png" type="image/x-icon">
   </head>
   <body>
     <main class="contenainer-main">
       <h1>Cuentax</h1>
-      <h2>Calculadora de propina </h2>
+      <h2>Calculadora de propina</h2>
       <div class="container-one">
         <label>
           <h3>Cuenta unificada</h3>
+          <h4>Por parte iguales</h4>
           <input type="number" placeholder="Cuenta en total" id="balance" />
           <input type="number" placeholder="Cantidad de personas" id="people" />
           <input type="number" placeholder="Porcentaje de propina" id="tip" />
@@ -25,10 +27,18 @@
       </div>
       <div class="container-several" id="container">
         <h3>Cuenta separadas</h3>
-        <input type="number" placeholder="Cantidad de personas " id="createCant">
+        <input
+          type="number"
+          placeholder="Cantidad de personas "
+          id="createCant"
+        />
         <button onclick="create()">Crear</button>
       </div>
+      <ul id="result-2"></ul>
     </main>
+    <a href="https://www.flaticon.com/free-icons/tip" title="tip icons"
+      >Tip icons created by Freepik - Flaticon</a
+    >
     <script src="app.js"></script>
   </body>
 </html>
