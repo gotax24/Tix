@@ -19,9 +19,10 @@ const calcular = () => {
 //!----------------------------Cuentas separadas------------------------------------------
 
 const create = () => {
+  const contenainer = document.getElementById("contenainer");
   const balances = [];
+
   const create = parseInt(document.getElementById("createCant").value);
-  const container = document.getElementById("container");
 
   for (let i = 0; i < create; i++) {
     let input = document.createElement("input");
@@ -29,21 +30,24 @@ const create = () => {
     input.type = "number";
     input.placeholder = `Cuenta de persona nro ${i + 1}`;
     input.classList.add("input");
-    container.appendChild(input);
+    contenainer.appendChild(input);
   }
 
   const tip = document.createElement("input");
   tip.type = "number";
   tip.placeholder = "Porcentaje de la propina";
   tip.id = "tip";
-  container.appendChild(tip);
+  tip.classList.add("input-tip");
+  contenainer.appendChild(tip);
 
   const button = document.createElement("button");
   button.textContent = "Calcular";
-  container.appendChild(button);
+  button.classList.add("button");
+  contenainer.appendChild(button);
 
   button.addEventListener("click", () => {
-    const inputs = container.querySelectorAll(".input");
+    balances.length = 0;
+    const inputs = contenainer.querySelectorAll(".input");
     inputs.forEach((input) => {
       balances.push(parseFloat(input.value));
     });

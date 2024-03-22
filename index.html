@@ -8,6 +8,7 @@
     <meta name="description" content="Pagina para calcular propinas" />
     <title>Tix | Propina personalizadas</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -23,25 +24,43 @@
       <h1>
         Tix
         <span
-          ><img src="payments_FILL0_wght400_GRAD0_opsz24.svg" alt=""
+          ><img
+            class="logo"
+            src="payments_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
         /></span>
       </h1>
       <h2>Calculadora de propina en tus manos</h2>
 
       <section>
-        <div class="container-1">
+        <div class="contenainer-1">
           <h3>Cuenta unificada</h3>
           <h4>Por parte iguales</h4>
-          <input type="number" placeholder="Cuenta en total" id="balance" />
-          <input type="number" placeholder="Cantidad de personas" id="people" />
-          <input type="number" placeholder="Porcentaje de propina" id="tip" />
-          <button onclick="calcular()">Calcular</button>
-          <p id="result"></p>
+          <input
+            class="input"
+            type="number"
+            placeholder="Cuenta en total"
+            id="balance"
+          />
+          <input
+            class="input"
+            type="number"
+            placeholder="Cantidad de personas"
+            id="people"
+          />
+          <input
+            class="input"
+            type="number"
+            placeholder="Porcentaje de propina"
+            id="tip"
+          />
+          <button class="button" onclick="calcular()">Calcular</button>
+          <p class="result" id="result"></p>
         </div>
       </section>
 
       <section>
-        <div class="container-2" id="container">
+        <div class="contenainer-2" id="contenainer">
           <h3>Varias personas</h3>
           <h4>Cuentas separadas</h4>
           <input
@@ -49,10 +68,10 @@
             placeholder="Cantidad de personas "
             id="createCant"
           />
-          <button onclick="create()">Crear</button>
+          <button class="button" onclick="create()">Crear</button>
         </div>
 
-        <ul id="result-2"></ul>
+        <ul class="list" id="result-2"></ul>
       </section>
     </main>
     <footer>
