@@ -1,0 +1,134 @@
+:root {
+  --color1: #e6787a;
+  --color2: #bb698f;
+  --color3: #2f4858;
+  --color4: #f6995c;
+  --font-serif: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: var(--color4);
+}
+
+.container-main h1 {
+  display: block;
+  font-size: 50px;
+  font-style: italic;
+  color: var(--color3);
+  text-align: center;
+}
+
+.container-main h2 {
+  text-align: center;
+  font-style: italic;
+  color: var(--color3);
+  font-size: 32px;
+}
+
+.container-1,
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra elementos horizontalmente */
+}
+
+h3 {
+  text-align: left;
+  color: var(--color2);
+  font-style: italic;
+  font-size: 28px;
+}
+
+h4 {
+  color: var(--color2);
+  font-style: italic;
+  font-size: 24px;
+}
+
+.container-1 .input,
+.container-2 input {
+  display: block;
+  width: 220px;
+  height: 25px;
+  border-radius: 8px;
+  border-style: none;
+  margin-bottom: 15px;
+  background-color: var(--color1);
+  color: var(--color3);
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.container-1 .input:focus,
+.container-2 input:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--color2); /* Resalta el campo enfocado */
+}
+
+.container-1 button,
+.container-2 button {
+  border-radius: 4px;
+  color: var(--color3);
+  background-color: var(--color2);
+  border-style: none;
+  width: 120px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container-1 button:hover,
+.container-2 button:hover {
+  background-color: var(--color3);
+  color: var(--color2);
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list li {
+  font-size: 18px;
+  color: var(--color3);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.credits {
+  display: grid;
+  place-items: center; /* Centra horizontal y verticalmente */
+  width: 100%;
+  min-height: 250px;
+}
+
+.social-network-icons {
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+.svg-footer {
+  height: 60px;
+  width: 60px;
+  transition: fill 0.3s, stroke 0.3s, transform 0.3s ease;
+}
+
+.credits .link-networks {
+  margin-right: 15px;
+}
+
+.copyright {
+  font-size: 18px;
+  color: #000000;
+}
+
+.svg-footer:hover {
+  fill: #ffffff;
+  stroke: #ffffff;
+  transform: scale(1.1); /* Cambio más suave, menos agresivo */
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
